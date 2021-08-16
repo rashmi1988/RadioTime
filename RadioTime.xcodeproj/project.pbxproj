@@ -1,0 +1,843 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		209F8C304602930A870BF940 /* Pods_RadioTime_RadioTimeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3D84A9CC27805241E18C5A /* Pods_RadioTime_RadioTimeUITests.framework */; };
+		664CF05A26C28841002D9048 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CF05926C28841002D9048 /* NowPlayingViewController.swift */; };
+		664CF05B26C28841002D9048 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CF05926C28841002D9048 /* NowPlayingViewController.swift */; };
+		664CF05C26C28841002D9048 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CF05926C28841002D9048 /* NowPlayingViewController.swift */; };
+		664CF05E26C2885A002D9048 /* RecentlyPlayedSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CF05D26C2885A002D9048 /* RecentlyPlayedSongsViewController.swift */; };
+		664CF05F26C2885A002D9048 /* RecentlyPlayedSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CF05D26C2885A002D9048 /* RecentlyPlayedSongsViewController.swift */; };
+		664CF06026C2885A002D9048 /* RecentlyPlayedSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CF05D26C2885A002D9048 /* RecentlyPlayedSongsViewController.swift */; };
+		664CF06626C290CD002D9048 /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CF06526C290CD002D9048 /* MusicPlayerView.swift */; };
+		664CF06726C290CD002D9048 /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CF06526C290CD002D9048 /* MusicPlayerView.swift */; };
+		664CF06826C290CD002D9048 /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CF06526C290CD002D9048 /* MusicPlayerView.swift */; };
+		66A56BD826C244DF00780080 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A56BD726C244DF00780080 /* AppDelegate.swift */; };
+		66A56BDA26C244DF00780080 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A56BD926C244DF00780080 /* SceneDelegate.swift */; };
+		66A56BDC26C244DF00780080 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A56BDB26C244DF00780080 /* MainViewController.swift */; };
+		66A56BDF26C244DF00780080 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66A56BDD26C244DF00780080 /* Main.storyboard */; };
+		66A56BE126C244E100780080 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66A56BE026C244E100780080 /* Assets.xcassets */; };
+		66A56BE426C244E100780080 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66A56BE226C244E100780080 /* LaunchScreen.storyboard */; };
+		66A56BEF26C244E100780080 /* RadioTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A56BEE26C244E100780080 /* RadioTimeTests.swift */; };
+		66A56BFA26C244E100780080 /* RadioTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A56BF926C244E100780080 /* RadioTimeUITests.swift */; };
+		66B7746C26C6403500633818 /* RecentlyPlayedSongsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B7746B26C6403500633818 /* RecentlyPlayedSongsTableViewCell.swift */; };
+		66B7746E26C6E9A500633818 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B7746D26C6E9A500633818 /* Song.swift */; };
+		66B7746F26C6E9A500633818 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B7746D26C6E9A500633818 /* Song.swift */; };
+		66B7747026C6E9A500633818 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B7746D26C6E9A500633818 /* Song.swift */; };
+		66B7747226C6EAA300633818 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B7747126C6EAA300633818 /* NetworkClient.swift */; };
+		66B7747326C6EAA300633818 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B7747126C6EAA300633818 /* NetworkClient.swift */; };
+		66B7747426C6EAA300633818 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B7747126C6EAA300633818 /* NetworkClient.swift */; };
+		66B7747626C768AB00633818 /* SongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B7747526C768AB00633818 /* SongsViewModel.swift */; };
+		66B7747726C768AB00633818 /* SongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B7747526C768AB00633818 /* SongsViewModel.swift */; };
+		66B7747826C768AB00633818 /* SongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B7747526C768AB00633818 /* SongsViewModel.swift */; };
+		66B7747D26C76C8200633818 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B7747C26C76C8200633818 /* AVFoundation.framework */; };
+		9F30DBDCE1785DA3D9D3FFFF /* Pods_RadioTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D953571ECE518F64B7B24C /* Pods_RadioTime.framework */; };
+		D95D23EA59924A2D99FA1098 /* Pods_RadioTimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2EC513C9B1EBBEB5FAEFAA /* Pods_RadioTimeTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66A56BEB26C244E100780080 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66A56BCC26C244DF00780080 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66A56BD326C244DF00780080;
+			remoteInfo = RadioTime;
+		};
+		66A56BF626C244E100780080 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66A56BCC26C244DF00780080 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66A56BD326C244DF00780080;
+			remoteInfo = RadioTime;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E3D84A9CC27805241E18C5A /* Pods_RadioTime_RadioTimeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RadioTime_RadioTimeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34D90CBA2104BBADB6024784 /* Pods-RadioTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioTime.debug.xcconfig"; path = "Target Support Files/Pods-RadioTime/Pods-RadioTime.debug.xcconfig"; sourceTree = "<group>"; };
+		63C3A7C5294EA1B36109E3FA /* Pods-RadioTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioTime.release.xcconfig"; path = "Target Support Files/Pods-RadioTime/Pods-RadioTime.release.xcconfig"; sourceTree = "<group>"; };
+		664CF05926C28841002D9048 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
+		664CF05D26C2885A002D9048 /* RecentlyPlayedSongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyPlayedSongsViewController.swift; sourceTree = "<group>"; };
+		664CF06526C290CD002D9048 /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
+		66A56BD426C244DF00780080 /* RadioTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66A56BD726C244DF00780080 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		66A56BD926C244DF00780080 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		66A56BDB26C244DF00780080 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		66A56BDE26C244DF00780080 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		66A56BE026C244E100780080 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66A56BE326C244E100780080 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		66A56BE526C244E100780080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66A56BEA26C244E100780080 /* RadioTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadioTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66A56BEE26C244E100780080 /* RadioTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioTimeTests.swift; sourceTree = "<group>"; };
+		66A56BF026C244E100780080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66A56BF526C244E100780080 /* RadioTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadioTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66A56BF926C244E100780080 /* RadioTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioTimeUITests.swift; sourceTree = "<group>"; };
+		66A56BFB26C244E100780080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66B7746B26C6403500633818 /* RecentlyPlayedSongsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyPlayedSongsTableViewCell.swift; sourceTree = "<group>"; };
+		66B7746D26C6E9A500633818 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		66B7747126C6EAA300633818 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		66B7747526C768AB00633818 /* SongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewModel.swift; sourceTree = "<group>"; };
+		66B7747C26C76C8200633818 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8C3555D697E6320A9B528F19 /* Pods-RadioTimeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioTimeTests.release.xcconfig"; path = "Target Support Files/Pods-RadioTimeTests/Pods-RadioTimeTests.release.xcconfig"; sourceTree = "<group>"; };
+		A307A7D09EB31462FBE0F564 /* Pods-RadioTime-RadioTimeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioTime-RadioTimeUITests.release.xcconfig"; path = "Target Support Files/Pods-RadioTime-RadioTimeUITests/Pods-RadioTime-RadioTimeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AC2EC513C9B1EBBEB5FAEFAA /* Pods_RadioTimeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RadioTimeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB6DDDF28382745FE2269DA /* Pods-RadioTime-RadioTimeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioTime-RadioTimeUITests.debug.xcconfig"; path = "Target Support Files/Pods-RadioTime-RadioTimeUITests/Pods-RadioTime-RadioTimeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B0F0328BB55C29F0B27CBD51 /* Pods-RadioTimeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioTimeTests.debug.xcconfig"; path = "Target Support Files/Pods-RadioTimeTests/Pods-RadioTimeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F1D953571ECE518F64B7B24C /* Pods_RadioTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RadioTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66A56BD126C244DF00780080 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B7747D26C76C8200633818 /* AVFoundation.framework in Frameworks */,
+				9F30DBDCE1785DA3D9D3FFFF /* Pods_RadioTime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66A56BE726C244E100780080 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95D23EA59924A2D99FA1098 /* Pods_RadioTimeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66A56BF226C244E100780080 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				209F8C304602930A870BF940 /* Pods_RadioTime_RadioTimeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66A56BCB26C244DF00780080 = {
+			isa = PBXGroup;
+			children = (
+				66A56BD626C244DF00780080 /* RadioTime */,
+				66A56BED26C244E100780080 /* RadioTimeTests */,
+				66A56BF826C244E100780080 /* RadioTimeUITests */,
+				66A56BD526C244DF00780080 /* Products */,
+				F0B99FC4D1B90A2E70E4161D /* Pods */,
+				A29986E5BDD978599C0CE361 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		66A56BD526C244DF00780080 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66A56BD426C244DF00780080 /* RadioTime.app */,
+				66A56BEA26C244E100780080 /* RadioTimeTests.xctest */,
+				66A56BF526C244E100780080 /* RadioTimeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66A56BD626C244DF00780080 /* RadioTime */ = {
+			isa = PBXGroup;
+			children = (
+				66B7747926C7692400633818 /* App Delegate */,
+				66A96AD326C60A1C003432F5 /* Model */,
+				66A96AD126C60A04003432F5 /* View */,
+				66A96AD226C60A14003432F5 /* ViewModel */,
+				66B7747B26C7695500633818 /* Network Connection */,
+				66A56BE026C244E100780080 /* Assets.xcassets */,
+				66A56BE226C244E100780080 /* LaunchScreen.storyboard */,
+				66A56BE526C244E100780080 /* Info.plist */,
+			);
+			path = RadioTime;
+			sourceTree = "<group>";
+		};
+		66A56BED26C244E100780080 /* RadioTimeTests */ = {
+			isa = PBXGroup;
+			children = (
+				66A56BEE26C244E100780080 /* RadioTimeTests.swift */,
+				66A56BF026C244E100780080 /* Info.plist */,
+			);
+			path = RadioTimeTests;
+			sourceTree = "<group>";
+		};
+		66A56BF826C244E100780080 /* RadioTimeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				66A56BF926C244E100780080 /* RadioTimeUITests.swift */,
+				66A56BFB26C244E100780080 /* Info.plist */,
+			);
+			path = RadioTimeUITests;
+			sourceTree = "<group>";
+		};
+		66A96AD126C60A04003432F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66A56BDB26C244DF00780080 /* MainViewController.swift */,
+				66A56BDD26C244DF00780080 /* Main.storyboard */,
+				664CF05926C28841002D9048 /* NowPlayingViewController.swift */,
+				664CF05D26C2885A002D9048 /* RecentlyPlayedSongsViewController.swift */,
+				664CF06526C290CD002D9048 /* MusicPlayerView.swift */,
+				66B7746B26C6403500633818 /* RecentlyPlayedSongsTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		66A96AD226C60A14003432F5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				66B7747526C768AB00633818 /* SongsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		66A96AD326C60A1C003432F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				66B7746D26C6E9A500633818 /* Song.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		66B7747926C7692400633818 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				66A56BD726C244DF00780080 /* AppDelegate.swift */,
+				66A56BD926C244DF00780080 /* SceneDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		66B7747B26C7695500633818 /* Network Connection */ = {
+			isa = PBXGroup;
+			children = (
+				66B7747126C6EAA300633818 /* NetworkClient.swift */,
+			);
+			path = "Network Connection";
+			sourceTree = "<group>";
+		};
+		A29986E5BDD978599C0CE361 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66B7747C26C76C8200633818 /* AVFoundation.framework */,
+				F1D953571ECE518F64B7B24C /* Pods_RadioTime.framework */,
+				0E3D84A9CC27805241E18C5A /* Pods_RadioTime_RadioTimeUITests.framework */,
+				AC2EC513C9B1EBBEB5FAEFAA /* Pods_RadioTimeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0B99FC4D1B90A2E70E4161D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34D90CBA2104BBADB6024784 /* Pods-RadioTime.debug.xcconfig */,
+				63C3A7C5294EA1B36109E3FA /* Pods-RadioTime.release.xcconfig */,
+				AEB6DDDF28382745FE2269DA /* Pods-RadioTime-RadioTimeUITests.debug.xcconfig */,
+				A307A7D09EB31462FBE0F564 /* Pods-RadioTime-RadioTimeUITests.release.xcconfig */,
+				B0F0328BB55C29F0B27CBD51 /* Pods-RadioTimeTests.debug.xcconfig */,
+				8C3555D697E6320A9B528F19 /* Pods-RadioTimeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66A56BD326C244DF00780080 /* RadioTime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66A56BFE26C244E100780080 /* Build configuration list for PBXNativeTarget "RadioTime" */;
+			buildPhases = (
+				08CCC079C43B696A2B1909A5 /* [CP] Check Pods Manifest.lock */,
+				66A56BD026C244DF00780080 /* Sources */,
+				66A56BD126C244DF00780080 /* Frameworks */,
+				66A56BD226C244DF00780080 /* Resources */,
+				D4648363D783A0BE449B5DB6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RadioTime;
+			productName = RadioTime;
+			productReference = 66A56BD426C244DF00780080 /* RadioTime.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66A56BE926C244E100780080 /* RadioTimeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66A56C0126C244E100780080 /* Build configuration list for PBXNativeTarget "RadioTimeTests" */;
+			buildPhases = (
+				5BCE9EC4C92C056042858094 /* [CP] Check Pods Manifest.lock */,
+				66A56BE626C244E100780080 /* Sources */,
+				66A56BE726C244E100780080 /* Frameworks */,
+				66A56BE826C244E100780080 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66A56BEC26C244E100780080 /* PBXTargetDependency */,
+			);
+			name = RadioTimeTests;
+			productName = RadioTimeTests;
+			productReference = 66A56BEA26C244E100780080 /* RadioTimeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		66A56BF426C244E100780080 /* RadioTimeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66A56C0426C244E100780080 /* Build configuration list for PBXNativeTarget "RadioTimeUITests" */;
+			buildPhases = (
+				3B261FA8B0FC82E799EE4380 /* [CP] Check Pods Manifest.lock */,
+				66A56BF126C244E100780080 /* Sources */,
+				66A56BF226C244E100780080 /* Frameworks */,
+				66A56BF326C244E100780080 /* Resources */,
+				DCB4144BE14E71ED94DE7FDF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66A56BF726C244E100780080 /* PBXTargetDependency */,
+			);
+			name = RadioTimeUITests;
+			productName = RadioTimeUITests;
+			productReference = 66A56BF526C244E100780080 /* RadioTimeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66A56BCC26C244DF00780080 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = InterTechMedia;
+				TargetAttributes = {
+					66A56BD326C244DF00780080 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					66A56BE926C244E100780080 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 66A56BD326C244DF00780080;
+					};
+					66A56BF426C244E100780080 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 66A56BD326C244DF00780080;
+					};
+				};
+			};
+			buildConfigurationList = 66A56BCF26C244DF00780080 /* Build configuration list for PBXProject "RadioTime" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66A56BCB26C244DF00780080;
+			productRefGroup = 66A56BD526C244DF00780080 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66A56BD326C244DF00780080 /* RadioTime */,
+				66A56BE926C244E100780080 /* RadioTimeTests */,
+				66A56BF426C244E100780080 /* RadioTimeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66A56BD226C244DF00780080 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66A56BE426C244E100780080 /* LaunchScreen.storyboard in Resources */,
+				66A56BE126C244E100780080 /* Assets.xcassets in Resources */,
+				66A56BDF26C244DF00780080 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66A56BE826C244E100780080 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66A56BF326C244E100780080 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08CCC079C43B696A2B1909A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RadioTime-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B261FA8B0FC82E799EE4380 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RadioTime-RadioTimeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BCE9EC4C92C056042858094 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RadioTimeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4648363D783A0BE449B5DB6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RadioTime/Pods-RadioTime-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RadioTime/Pods-RadioTime-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RadioTime/Pods-RadioTime-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCB4144BE14E71ED94DE7FDF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RadioTime-RadioTimeUITests/Pods-RadioTime-RadioTimeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RadioTime-RadioTimeUITests/Pods-RadioTime-RadioTimeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RadioTime-RadioTimeUITests/Pods-RadioTime-RadioTimeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66A56BD026C244DF00780080 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				664CF05A26C28841002D9048 /* NowPlayingViewController.swift in Sources */,
+				66B7747626C768AB00633818 /* SongsViewModel.swift in Sources */,
+				66A56BDC26C244DF00780080 /* MainViewController.swift in Sources */,
+				66A56BD826C244DF00780080 /* AppDelegate.swift in Sources */,
+				664CF06626C290CD002D9048 /* MusicPlayerView.swift in Sources */,
+				66B7746E26C6E9A500633818 /* Song.swift in Sources */,
+				66B7747226C6EAA300633818 /* NetworkClient.swift in Sources */,
+				66A56BDA26C244DF00780080 /* SceneDelegate.swift in Sources */,
+				664CF05E26C2885A002D9048 /* RecentlyPlayedSongsViewController.swift in Sources */,
+				66B7746C26C6403500633818 /* RecentlyPlayedSongsTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66A56BE626C244E100780080 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				664CF05B26C28841002D9048 /* NowPlayingViewController.swift in Sources */,
+				664CF06726C290CD002D9048 /* MusicPlayerView.swift in Sources */,
+				66B7747726C768AB00633818 /* SongsViewModel.swift in Sources */,
+				66A56BEF26C244E100780080 /* RadioTimeTests.swift in Sources */,
+				664CF05F26C2885A002D9048 /* RecentlyPlayedSongsViewController.swift in Sources */,
+				66B7746F26C6E9A500633818 /* Song.swift in Sources */,
+				66B7747326C6EAA300633818 /* NetworkClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66A56BF126C244E100780080 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				664CF05C26C28841002D9048 /* NowPlayingViewController.swift in Sources */,
+				664CF06826C290CD002D9048 /* MusicPlayerView.swift in Sources */,
+				66B7747826C768AB00633818 /* SongsViewModel.swift in Sources */,
+				66A56BFA26C244E100780080 /* RadioTimeUITests.swift in Sources */,
+				664CF06026C2885A002D9048 /* RecentlyPlayedSongsViewController.swift in Sources */,
+				66B7747026C6E9A500633818 /* Song.swift in Sources */,
+				66B7747426C6EAA300633818 /* NetworkClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66A56BEC26C244E100780080 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66A56BD326C244DF00780080 /* RadioTime */;
+			targetProxy = 66A56BEB26C244E100780080 /* PBXContainerItemProxy */;
+		};
+		66A56BF726C244E100780080 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66A56BD326C244DF00780080 /* RadioTime */;
+			targetProxy = 66A56BF626C244E100780080 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		66A56BDD26C244DF00780080 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66A56BDE26C244DF00780080 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		66A56BE226C244E100780080 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66A56BE326C244E100780080 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66A56BFC26C244E100780080 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		66A56BFD26C244E100780080 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66A56BFF26C244E100780080 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34D90CBA2104BBADB6024784 /* Pods-RadioTime.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 001;
+				INFOPLIST_FILE = RadioTime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = InterTechMedia.RadioTime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		66A56C0026C244E100780080 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63C3A7C5294EA1B36109E3FA /* Pods-RadioTime.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 001;
+				INFOPLIST_FILE = RadioTime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = InterTechMedia.RadioTime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		66A56C0226C244E100780080 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0F0328BB55C29F0B27CBD51 /* Pods-RadioTimeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RadioTimeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = InterTechMedia.RadioTimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RadioTime.app/RadioTime";
+			};
+			name = Debug;
+		};
+		66A56C0326C244E100780080 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C3555D697E6320A9B528F19 /* Pods-RadioTimeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RadioTimeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = InterTechMedia.RadioTimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RadioTime.app/RadioTime";
+			};
+			name = Release;
+		};
+		66A56C0526C244E100780080 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEB6DDDF28382745FE2269DA /* Pods-RadioTime-RadioTimeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RadioTimeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = InterTechMedia.RadioTimeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RadioTime;
+			};
+			name = Debug;
+		};
+		66A56C0626C244E100780080 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A307A7D09EB31462FBE0F564 /* Pods-RadioTime-RadioTimeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RadioTimeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = InterTechMedia.RadioTimeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RadioTime;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66A56BCF26C244DF00780080 /* Build configuration list for PBXProject "RadioTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66A56BFC26C244E100780080 /* Debug */,
+				66A56BFD26C244E100780080 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66A56BFE26C244E100780080 /* Build configuration list for PBXNativeTarget "RadioTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66A56BFF26C244E100780080 /* Debug */,
+				66A56C0026C244E100780080 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66A56C0126C244E100780080 /* Build configuration list for PBXNativeTarget "RadioTimeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66A56C0226C244E100780080 /* Debug */,
+				66A56C0326C244E100780080 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66A56C0426C244E100780080 /* Build configuration list for PBXNativeTarget "RadioTimeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66A56C0526C244E100780080 /* Debug */,
+				66A56C0626C244E100780080 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66A56BCC26C244DF00780080 /* Project object */;
+}
