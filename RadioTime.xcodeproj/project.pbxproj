@@ -25,6 +25,8 @@
 		66A56BE426C244E100780080 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66A56BE226C244E100780080 /* LaunchScreen.storyboard */; };
 		66A56BEF26C244E100780080 /* RadioTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A56BEE26C244E100780080 /* RadioTimeTests.swift */; };
 		66A56BFA26C244E100780080 /* RadioTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A56BF926C244E100780080 /* RadioTimeUITests.swift */; };
+		66A8103926CAA1A200768DFD /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A8103826CAA1A200768DFD /* NetworkExtension.framework */; };
+		66A8103B26CAA1B300768DFD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A8103A26CAA1B300768DFD /* AudioToolbox.framework */; };
 		66B7746C26C6403500633818 /* RecentlyPlayedSongsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B7746B26C6403500633818 /* RecentlyPlayedSongsTableViewCell.swift */; };
 		66B7746E26C6E9A500633818 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B7746D26C6E9A500633818 /* Song.swift */; };
 		66B7746F26C6E9A500633818 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B7746D26C6E9A500633818 /* Song.swift */; };
@@ -78,6 +80,9 @@
 		66A56BF526C244E100780080 /* RadioTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadioTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A56BF926C244E100780080 /* RadioTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioTimeUITests.swift; sourceTree = "<group>"; };
 		66A56BFB26C244E100780080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66A8103726CAA1A200768DFD /* RadioTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RadioTime.entitlements; sourceTree = "<group>"; };
+		66A8103826CAA1A200768DFD /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		66A8103A26CAA1B300768DFD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		66B7746B26C6403500633818 /* RecentlyPlayedSongsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyPlayedSongsTableViewCell.swift; sourceTree = "<group>"; };
 		66B7746D26C6E9A500633818 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		66B7747126C6EAA300633818 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
@@ -97,7 +102,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				66B7747D26C76C8200633818 /* AVFoundation.framework in Frameworks */,
+				66A8103926CAA1A200768DFD /* NetworkExtension.framework in Frameworks */,
 				9F30DBDCE1785DA3D9D3FFFF /* Pods_RadioTime.framework in Frameworks */,
+				66A8103B26CAA1B300768DFD /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +152,7 @@
 		66A56BD626C244DF00780080 /* RadioTime */ = {
 			isa = PBXGroup;
 			children = (
+				66A8103726CAA1A200768DFD /* RadioTime.entitlements */,
 				66B7747926C7692400633818 /* App Delegate */,
 				66A96AD326C60A1C003432F5 /* Model */,
 				66A96AD126C60A04003432F5 /* View */,
@@ -224,6 +232,8 @@
 		A29986E5BDD978599C0CE361 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				66A8103A26CAA1B300768DFD /* AudioToolbox.framework */,
+				66A8103826CAA1A200768DFD /* NetworkExtension.framework */,
 				66B7747C26C76C8200633818 /* AVFoundation.framework */,
 				F1D953571ECE518F64B7B24C /* Pods_RadioTime.framework */,
 				0E3D84A9CC27805241E18C5A /* Pods_RadioTime_RadioTimeUITests.framework */,
@@ -679,9 +689,12 @@
 			baseConfigurationReference = 34D90CBA2104BBADB6024784 /* Pods-RadioTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = RadioTime/RadioTime.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 001;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RadioTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -689,6 +702,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = InterTechMedia.RadioTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -699,9 +713,12 @@
 			baseConfigurationReference = 63C3A7C5294EA1B36109E3FA /* Pods-RadioTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = RadioTime/RadioTime.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 001;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RadioTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -709,6 +726,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = InterTechMedia.RadioTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

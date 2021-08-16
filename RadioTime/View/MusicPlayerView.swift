@@ -74,8 +74,10 @@ class MusicPlayerView: UIView {
     func setupView() {
         lblSongTitle.text = "Default Song title"
         lblSongTitle.numberOfLines = 0
+        lblSongTitle.font = UIFont.systemFont(ofSize: 18)
         lblArtistName.text = "Artist Name"
         lblArtistName.numberOfLines = 0
+        lblArtistName.font = UIFont.italicSystemFont(ofSize: 14)
         [lblSongTitle, lblArtistName].forEach {
             titleStackView.addArrangedSubview($0)
         }
@@ -86,17 +88,16 @@ class MusicPlayerView: UIView {
     }
     
     @objc func onPlayPauseButtonTap (_ sender: Any) {
+        
+        if showPlayButtonIcon {
+            loadRadio(radioURL: "https://rfcmedia.streamguys1.com/70hits.aac")
+        }
         showPlayButtonIcon = !showPlayButtonIcon
         
         if !showPlayButtonIcon {
-            UIView.animate(withDuration: 1) {
-                self.btnPlayPause.setImage(UIImage(named: "pause"), for: .normal)
-            }
+            self.btnPlayPause.setImage(UIImage(named: "pause"), for: .normal)
         } else {
-            UIView.animate(withDuration: 1) {
-                self.btnPlayPause.setImage(UIImage(named: "play"), for: .normal)
-            }
-            loadRadio(radioURL: "https://rfcmedia.streamguys1.com/70hits.aac")
+            self.btnPlayPause.setImage(UIImage(named: "play"), for: .normal)
         }
     }
     
