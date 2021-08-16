@@ -6,7 +6,7 @@
  Swift version 5.0 <br />
  Dependency maanger - Cocoa pod <br />
  Supported devices: iPhones only <br />
- UI design using (UIKit/SwiftUI) - UIKit
+ UI design using (Programmatic/Storyboard/SwiftUI) - Programmatic
  
  # Libraries (pods) used
  Alamofire 5.4 (for networking) <br />
