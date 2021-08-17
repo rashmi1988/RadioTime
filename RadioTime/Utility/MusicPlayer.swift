@@ -6,11 +6,14 @@
 //  Copyright © 2021 InterTechMedia. All rights reserved.
 //
 
+// This singleton class is responsible for streaming music from the hard coded link
+// It supports play and pause features
+
 import Foundation
 import AVFoundation
 
 class MusicPlayer {
-    public static var instance = MusicPlayer()
+    public static var instance = MusicPlayer() // singletton instance
     private var player = AVPlayer()
     private let songURL = "https://rfcmedia.streamguys1.com/70hits.aac"
     

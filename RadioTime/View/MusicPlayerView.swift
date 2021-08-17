@@ -17,7 +17,11 @@ protocol MusicPlayerDelegate: AnyObject {
 class MusicPlayerView: UIView {
     
     private let songURL = "https://rfcmedia.streamguys1.com/70hits.aac"
-    private var showPlayButtonIcon = true
+    var showPlayButtonIcon = true {
+        didSet{
+            updateButtonImage()
+        }
+    }
     private var player: AVPlayer?
     private let lblSongTitle = UILabel()
     private let lblArtistName = UILabel()
@@ -103,17 +107,12 @@ class MusicPlayerView: UIView {
                 // show ad in 10 minutes intervals
                 musicPlayerDelegate?.showAdView()
             } else {
+                showPlayButtonIcon = false
                 MusicPlayer.instance.play()
             }
         } else {
             MusicPlayer.instance.pause()
-        }
-        showPlayButtonIcon = !showPlayButtonIcon
-        
-        if !showPlayButtonIcon {
-            self.btnPlayPause.setImage(UIImage(named: "pause"), for: .normal)
-        } else {
-            self.btnPlayPause.setImage(UIImage(named: "play"), for: .normal)
+            showPlayButtonIcon = true
         }
     }
     
@@ -132,6 +131,14 @@ class MusicPlayerView: UIView {
             }
             lblSongTitle.text = song.name
             lblArtistName.text = song.artist
+        }
+    }
+    
+    func updateButtonImage()  {
+        if !showPlayButtonIcon {
+            self.btnPlayPause.setImage(UIImage(named: "pause"), for: .normal)
+        } else {
+            self.btnPlayPause.setImage(UIImage(named: "play"), for: .normal)
         }
     }
 }

@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  RadioTime
 //
-//  Created by TCS MacBook on 10/08/21.
+//  Created by Rashmi on 10/08/21.
 //  Copyright © 2021 InterTechMedia. All rights reserved.
 //
 
@@ -14,13 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // customisation of nav and tool bars which will affect whole application
         
         UINavigationBar.appearance().barTintColor = UIColor(red: 43.0/255.0, green: 87.0/255.0, blue: 126.0/255.0, alpha: 1.0)  // solid color
         UIBarButtonItem.appearance().tintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         UITabBar.appearance().barTintColor = UIColor(red: 179.0/255.0, green: 218.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         
+        // Start the timer to show ad before playing music
+        // To show ad after 10 minute interval
         UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: "AdTimer")
         
         return true

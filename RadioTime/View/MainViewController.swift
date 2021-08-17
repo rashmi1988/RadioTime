@@ -11,12 +11,11 @@ import SnapKit
 
 class MainViewController: UITabBarController, UITabBarControllerDelegate, MusicPlayerDelegate, AdProtocol {
     
-    
     //MARK:- properties
-    
     private var viewModel = SongsViewModel()
     private lazy var nowPlayingViewController = NowPlayingViewController()
     private lazy var recentlyPlayedSongsViewController = RecentlyPlayedSongsViewController()
+    private let musicPlayerView = MusicPlayerView(frame: CGRect.zero)
     private var loader: UIActivityIndicatorView = {
         var tempLoader = UIActivityIndicatorView(style: .large)
         tempLoader.backgroundColor = .black
@@ -25,7 +24,6 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate, MusicP
         return tempLoader
     }()
     
-    private let musicPlayerView = MusicPlayerView(frame: CGRect.zero)
     
     //MARK:- view life cycle methods
     
@@ -40,6 +38,7 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate, MusicP
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
+    
     
     //MARK:- callbacks to viewModel events
     func setupListeners() {
@@ -79,7 +78,6 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate, MusicP
     }
     
     //MARK:- UI setup methods
-    
     func showLoader() {
         self.view.addSubview(loader)
         loader.snp.makeConstraints { (make) in
@@ -140,11 +138,13 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate, MusicP
         UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: "AdTimer")
         let adViewController = AdViewController()
         adViewController.delegate = self
-        adViewController.modalPresentationStyle = .fullScreen
-        self.present(adViewController, animated: true, completion: nil)
+        let navigationController = UINavigationController(rootViewController: adViewController)
+        navigationController.modalPresentationStyle = .fullScreen
+        self.present(navigationController, animated: true, completion: nil)
     }
     
     func playSongAfterAd() {
+        musicPlayerView.showPlayButtonIcon = false
         MusicPlayer.instance.play()
     }
     
