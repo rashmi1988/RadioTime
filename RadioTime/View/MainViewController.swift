@@ -9,7 +9,8 @@
 import UIKit
 import SnapKit
 
-class MainViewController: UITabBarController, UITabBarControllerDelegate {
+class MainViewController: UITabBarController, UITabBarControllerDelegate, MusicPlayerDelegate, AdProtocol {
+    
     
     //MARK:- properties
     
@@ -115,6 +116,7 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
     
     func addPlayerView()  {
         musicPlayerView.layer.cornerRadius = 5
+        musicPlayerView.musicPlayerDelegate = self
         view.addSubview(musicPlayerView)
         musicPlayerView.translatesAutoresizingMaskIntoConstraints = false
         musicPlayerView.snp.makeConstraints { (make) in
@@ -132,6 +134,23 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
         self.view.isUserInteractionEnabled = false
         showLoader()
         viewModel.fetchSongs(isInitialDownload: false)
+    }
+    
+    func showAdView() {
+        UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: "AdTimer")
+        let adViewController = AdViewController()
+        adViewController.delegate = self
+        adViewController.modalPresentationStyle = .fullScreen
+        self.present(adViewController, animated: true, completion: nil)
+    }
+    
+    func playSongAfterAd() {
+        MusicPlayer.instance.play()
+    }
+    
+    deinit {
+        musicPlayerView.musicPlayerDelegate = nil
+        musicPlayerView.removeFromSuperview()
     }
 }
 

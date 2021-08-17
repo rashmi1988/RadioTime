@@ -10,13 +10,20 @@ import UIKit
 import SnapKit
 import AVFoundation
 
+protocol MusicPlayerDelegate: AnyObject {
+    func showAdView()
+}
+
 class MusicPlayerView: UIView {
     
+    private let songURL = "https://rfcmedia.streamguys1.com/70hits.aac"
     private var showPlayButtonIcon = true
     private var player: AVPlayer?
     private let lblSongTitle = UILabel()
     private let lblArtistName = UILabel()
     
+    weak var musicPlayerDelegate: MusicPlayerDelegate?
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -85,12 +92,21 @@ class MusicPlayerView: UIView {
             stackView.addArrangedSubview($0)
         }
         addSubview(stackView)
+        MusicPlayer.instance.initialise()
     }
     
     @objc func onPlayPauseButtonTap (_ sender: Any) {
         
         if showPlayButtonIcon {
-            loadRadio(radioURL: "https://rfcmedia.streamguys1.com/70hits.aac")
+            let date = Date(timeIntervalSince1970: UserDefaults.standard.double(forKey: "AdTimer"))
+            if date.addingTimeInterval(60) < Date() {
+                // show ad in 10 minutes intervals
+                musicPlayerDelegate?.showAdView()
+            } else {
+                MusicPlayer.instance.play()
+            }
+        } else {
+            MusicPlayer.instance.pause()
         }
         showPlayButtonIcon = !showPlayButtonIcon
         
@@ -101,9 +117,9 @@ class MusicPlayerView: UIView {
         }
     }
     
-    func loadRadio(radioURL: String) {
+    func loadRadio() {
 
-        guard let url = URL(string: radioURL) else { return }
+        guard let url = URL(string: songURL) else { return }
         let playerItem = AVPlayerItem.init(url: url)
         player = AVPlayer(playerItem: playerItem)
         player?.play()

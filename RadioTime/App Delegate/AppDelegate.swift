@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         UITabBar.appearance().barTintColor = UIColor(red: 179.0/255.0, green: 218.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         
+        UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: "AdTimer")
+        
         return true
     }
 
