@@ -42,6 +42,7 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate, MusicP
     
     //MARK:- callbacks to viewModel events
     func setupListeners() {
+        // this will be called from viewmodel after initial download during app launch
         viewModel.updateUIAfterInitialDownloadSuccess = {
             self.view.isUserInteractionEnabled = true
             self.hideLoader()
@@ -49,6 +50,7 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate, MusicP
             self.addPlayerView()
         }
         
+        // this will be called from viewmodel after data refresh
         viewModel.updateUIAfterSongsRefreshed = {
             self.view.isUserInteractionEnabled = true
             self.hideLoader()
@@ -59,6 +61,7 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate, MusicP
             }
         }
         
+        // this will be called from viewmodel after any sort of download failure
         viewModel.showAlertAfterSongsDownloadFailed = { isInitialDownload in
             self.view.isUserInteractionEnabled = true
             self.hideLoader()
@@ -67,32 +70,35 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate, MusicP
 
             // add the actions (buttons)
             alert.addAction(UIAlertAction(title: "Retry", style: UIAlertAction.Style.default, handler: { action in
+                //if there is any download failure, re-try it with user confirmation
+                // the boolean argument is to distinguish between initial sync and user refresh action
                 self.showLoader()
                 self.viewModel.fetchSongs(isInitialDownload: isInitialDownload)
             }))
             alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
 
-            // show the alert
+            // show the alert to user
             self.present(alert, animated: true, completion: nil)
         }
     }
     
     //MARK:- UI setup methods
     func showLoader() {
+        // Add the loader on view and start animating
         self.view.addSubview(loader)
         loader.snp.makeConstraints { (make) in
-            make.centerX.equalTo(self.view)
-            make.centerY.equalTo(self.view)
+            make.center.equalTo(self.view)
         }
         loader.startAnimating()
     }
     func hideLoader() {
+        // stop animating and remove the loader from view
         loader.stopAnimating()
         loader.removeFromSuperview()
     }
     
     func populateTabBarController()  {
-        if let songsArray = viewModel.songsArray {
+        if let songsArray = viewModel.songsArray, songsArray.count>0 {
             nowPlayingViewController.songToHighlight = songsArray[0]
         }
         recentlyPlayedSongsViewController.songsArray = viewModel.songsArray
@@ -128,12 +134,16 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate, MusicP
         }
     }
     
+    //MARK:- data refresh on refresh button click
     @objc func refreshData(){
+        // disable all user interactions while data is getting downloaded
         self.view.isUserInteractionEnabled = false
         showLoader()
         viewModel.fetchSongs(isInitialDownload: false)
     }
     
+    
+    //MARK:- custom delegate methods
     func showAdView() {
         UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: "AdTimer")
         let adViewController = AdViewController()
@@ -148,6 +158,8 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate, MusicP
         MusicPlayer.instance.play()
     }
     
+    
+    //MARK:-  deinit
     deinit {
         musicPlayerView.musicPlayerDelegate = nil
         musicPlayerView.removeFromSuperview()

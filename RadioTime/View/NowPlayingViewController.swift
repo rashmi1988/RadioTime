@@ -12,6 +12,7 @@ import Kingfisher
 
 class NowPlayingViewController: UIViewController {
     
+    //MARK:- 
     var songToHighlight: Song?
 
     override func viewDidLoad() {

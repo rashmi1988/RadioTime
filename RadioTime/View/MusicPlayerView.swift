@@ -103,7 +103,7 @@ class MusicPlayerView: UIView {
         
         if showPlayButtonIcon {
             let date = Date(timeIntervalSince1970: UserDefaults.standard.double(forKey: "AdTimer"))
-            if date.addingTimeInterval(60) < Date() {
+            if date.addingTimeInterval(60*3) < Date() {
                 // show ad in 10 minutes intervals
                 musicPlayerDelegate?.showAdView()
             } else {
